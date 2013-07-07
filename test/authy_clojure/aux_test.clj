@@ -17,11 +17,11 @@
 
 (deftest test-build-url
   (testing "build-url"
-    (is (re-find #"authy.com" (build-url [])))
-    (is (re-find #"param/test/do" (build-url ["param" "test" "do"])))))
+    (is (re-find #"authy.com" (build-url "https://api.authy.com" [])))
+    (is (re-find #"param/test/do" (build-url "https://some.com" ["param" "test" "do"])))))
 
 (deftest test-request
   (testing "request"
-    (is (= 401 @(request :get [] {} {} #(:status %))))
-    (is (= "{\"success\":\"false\",\"message\":\"Invalid API KEY\",\"errors\":{\"message\":\"Invalid API KEY\"}}"
-           @(request :get [] {} {} #(:body %))))))
+    (let [response @(request :get [] (authy-clojure.conf/new-authy-config "https://api.authy.com/protected/json" "some-api-key") {} parse)]
+      (is (= 401 (:status response)))
+      (is (= "Invalid API KEY" (:message response))))))
