@@ -2,6 +2,24 @@
 
 This is a non-production ready client for authy api
 
+## Current version
+
+### leiningen
+
+```clojure
+[authy-clojure "0.1.0-SNAPSHOT"]
+```
+
+### maven
+
+```xml
+<dependency>
+  <groupId>authy-clojure</groupId>
+  <artifactId>authy-clojure</artifactId>
+  <version>0.1.0-SNAPSHOT</version>
+</dependency>
+```
+
 ## Usage
 
 ```clojure
