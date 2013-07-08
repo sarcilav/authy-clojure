@@ -22,7 +22,7 @@ foo> (authy/register-user {:user
      :country_code "1"}}
      config)
 ;; #<core$promise$reify__6310@5b7f494c: :pending>
-;; As you notice you will need deref the promise object to be able to read it
+;; As you notice you will need to deref the promise object to be able to read it
 
 foo> @(authy/register-user {:user
     {:email "sebastianarcila@gmail.com"
