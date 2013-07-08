@@ -43,9 +43,9 @@ foo> (authy/register-user {:user
 ;; As you notice you will need to deref the promise object to be able to read it
 
 foo> @(authy/register-user {:user
-    {:email "sebastianarcila@gmail.com"
-     :cellphone "3148174881"
-     :country_code "57"}}
+    {:email "some@place.com"
+     :cellphone "3228276771"
+     :country_code "1"}}
      config)
 ;; {:message "User created successfully", :user {"id" 3996}, :success "true", :status 200}
 
