@@ -2,6 +2,7 @@
 
 This is a non-production ready client for authy api
 
+More info at: http://docs.authy.com/
 ## Current version
 
 ### leiningen
