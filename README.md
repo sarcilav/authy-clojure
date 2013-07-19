@@ -1,4 +1,4 @@
-# authy-clojure
+# authy-clojure [![Build Status](https://travis-ci.org/sarcilav/authy-clojure.png?branch=master)](https://travis-ci.org/sarcilav/authy-clojure)
 
 This is a non-production ready client for authy api
 
